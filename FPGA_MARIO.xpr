@@ -133,7 +133,7 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../DOS-Mario-FPGA/sources/gameover.v">
-        <FileInfo>
+        <FileInfo SFType="SVerilog">
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
