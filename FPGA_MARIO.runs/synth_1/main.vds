@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed May 28 13:01:36 2025
+# Process ID: 10040
+# Current directory: C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/main.vds
+# Journal file: C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1\vivado.jou
+# Running On: YanX, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16885 MB
+#-----------------------------------------------------------
+source main.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 493.270 ; gain = 182.016
+Command: synth_design -top main -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
