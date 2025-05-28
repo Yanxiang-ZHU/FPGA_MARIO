@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed May 28 13:11:00 2025
-# Process ID: 5944
+# Start of session at: Wed May 28 16:09:52 2025
+# Process ID: 40912
 # Current directory: C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/main.vds
@@ -12,17 +12,22 @@
 # Running On: YanX, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16885 MB
 #-----------------------------------------------------------
 source main.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 492.023 ; gain = 178.750
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 493.008 ; gain = 180.875
+Command: read_checkpoint -auto_incremental -incremental C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/utils_1/imports/synth_1/main.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/utils_1/imports/synth_1/main.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top main -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1512
+INFO: [Synth 8-7075] Helper process launched with PID 1852
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1336.641 ; gain = 439.949
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.090 ; gain = 442.066
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-11241] undeclared symbol 'hsync_cl_out', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/draw_background.v:47]
 INFO: [Synth 8-11241] undeclared symbol 'vsync_cl_out', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/draw_background.v:49]
@@ -130,22 +135,22 @@ WARNING: [Synth 8-6901] identifier 'old_block_nxt' is used before its declaratio
 WARNING: [Synth 8-6901] identifier 'GY' is used before its declaration [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/new_block.v:16]
 WARNING: [Synth 8-6901] identifier 'B' is used before its declaration [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/new_block.v:18]
 INFO: [Common 17-14] Message 'Synth 8-6901' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-11241] undeclared symbol 'clk_50M', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:80]
-INFO: [Synth 8-11241] undeclared symbol 'char_line_pixels', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:200]
-INFO: [Synth 8-11241] undeclared symbol 'char_xy', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:208]
-INFO: [Synth 8-11241] undeclared symbol 'char_line', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:209]
-INFO: [Synth 8-11241] undeclared symbol 'gameover', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:219]
-INFO: [Synth 8-11241] undeclared symbol 'fs_ram_we', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:264]
-WARNING: [Synth 8-8895] 'char_line_pixels' is already implicitly declared on line 200 [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:277]
-WARNING: [Synth 8-8895] 'char_line' is already implicitly declared on line 209 [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:279]
-WARNING: [Synth 8-8895] 'char_xy' is already implicitly declared on line 208 [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:280]
-INFO: [Synth 8-11241] undeclared symbol 'engine_we', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:310]
-INFO: [Synth 8-11241] undeclared symbol 'stage_restart', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:311]
-INFO: [Synth 8-11241] undeclared symbol 'engine_blocking', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:316]
-INFO: [Synth 8-11241] undeclared symbol 'stage_restarted', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:322]
+INFO: [Synth 8-11241] undeclared symbol 'clk_50M', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:78]
+INFO: [Synth 8-11241] undeclared symbol 'char_line_pixels', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:198]
+INFO: [Synth 8-11241] undeclared symbol 'char_xy', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:206]
+INFO: [Synth 8-11241] undeclared symbol 'char_line', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:207]
+INFO: [Synth 8-11241] undeclared symbol 'gameover', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:217]
+INFO: [Synth 8-11241] undeclared symbol 'fs_ram_we', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:262]
+WARNING: [Synth 8-8895] 'char_line_pixels' is already implicitly declared on line 198 [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:275]
+WARNING: [Synth 8-8895] 'char_line' is already implicitly declared on line 207 [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:277]
+WARNING: [Synth 8-8895] 'char_xy' is already implicitly declared on line 206 [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:278]
+INFO: [Synth 8-11241] undeclared symbol 'engine_we', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:308]
+INFO: [Synth 8-11241] undeclared symbol 'stage_restart', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:309]
+INFO: [Synth 8-11241] undeclared symbol 'engine_blocking', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:314]
+INFO: [Synth 8-11241] undeclared symbol 'stage_restarted', assumed default net type 'wire' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:320]
 INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:3]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/clk_wiz_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/clk_wiz_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'clk_divider' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/clk_divider.v:3]
 	Parameter FREQ bound to: 200000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'clk_divider' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/clk_divider.v:3]
@@ -171,12 +176,12 @@ INFO: [Synth 8-6157] synthesizing module 'Gameover' [C:/Users/39551/Desktop/DOS-
 INFO: [Synth 8-6155] done synthesizing module 'Gameover' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/gameover.v:3]
 INFO: [Synth 8-6157] synthesizing module 'Change2Negedge' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/change2negedge.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'Change2Negedge' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/change2negedge.v:3]
-INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_0' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/dist_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_0' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/dist_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_1' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/dist_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_1' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/dist_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_2' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/dist_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_2' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-5944-YanX/realtime/dist_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_0' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_0' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/dist_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_1' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/dist_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_1' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/dist_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dist_mem_gen_2' [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/dist_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dist_mem_gen_2' (0#1) [C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/.Xil/Vivado-40912-YanX/realtime/dist_mem_gen_2_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'MarioFontRom' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/mario_font_rom.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'MarioFontRom' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/mario_font_rom.v:3]
 INFO: [Synth 8-6157] synthesizing module 'MarioScore24x1' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/mario_score24x1.v:3]
@@ -189,26 +194,33 @@ INFO: [Synth 8-6155] done synthesizing module 'divide_by12' (0#1) [C:/Users/3955
 INFO: [Synth 8-6155] done synthesizing module 'Music' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/music.v:3]
 INFO: [Synth 8-6157] synthesizing module 'FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/first_stage.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'FirstStage' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/first_stage.v:3]
-WARNING: [Synth 8-7071] port 'copy_read_data' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'write_block' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'clk' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'rst' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'copy_addr' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'blocking' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'ram_we' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'ram_write_data' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7071] port 'backuped' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
-WARNING: [Synth 8-7023] instance 'Display_FirstStage' of module 'FirstStage' has 16 connections declared, but only 7 given [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:325]
+WARNING: [Synth 8-7071] port 'copy_read_data' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'write_block' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'clk' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'rst' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'copy_addr' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'blocking' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'ram_we' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'ram_write_data' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7071] port 'backuped' of module 'FirstStage' is unconnected for instance 'Display_FirstStage' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
+WARNING: [Synth 8-7023] instance 'Display_FirstStage' of module 'FirstStage' has 16 connections declared, but only 7 given [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:323]
 INFO: [Synth 8-6157] synthesizing module 'GameEngine' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/game_engine.v:3]
 INFO: [Synth 8-6157] synthesizing module 'new_block' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/new_block.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'new_block' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/new_block.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'GameEngine' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/game_engine.v:3]
-WARNING: [Synth 8-7071] port 'monster_1_dir' of module 'GameEngine' is unconnected for instance 'GameEngine_u' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:337]
-WARNING: [Synth 8-7023] instance 'GameEngine_u' of module 'GameEngine' has 34 connections declared, but only 33 given [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:337]
-INFO: [Synth 8-6157] synthesizing module 'mouse_basys3_FPGA' [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mouse_basys3_FPGA' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:1]
+WARNING: [Synth 8-7071] port 'monster_1_dir' of module 'GameEngine' is unconnected for instance 'GameEngine_u' [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:335]
+WARNING: [Synth 8-7023] instance 'GameEngine_u' of module 'GameEngine' has 34 connections declared, but only 33 given [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:335]
+INFO: [Synth 8-6157] synthesizing module 'mouse_basys3_FPGA' [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mouse_basys3_FPGA' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v:3]
 WARNING: [Synth 8-3848] Net monster_1_dir in module/entity GameEngine does not have driver. [C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/game_engine.v:31]
+WARNING: [Synth 8-6014] Unused sequential element left_click_reg was removed.  [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:83]
+WARNING: [Synth 8-6014] Unused sequential element right_click_reg was removed.  [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:84]
+WARNING: [Synth 8-6014] Unused sequential element mouse_packet_reg[2] was removed.  [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:92]
+WARNING: [Synth 8-6014] Unused sequential element mouse_packet_reg[1] was removed.  [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:92]
+WARNING: [Synth 8-6014] Unused sequential element displayed_number_reg was removed.  [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:105]
+WARNING: [Synth 8-7137] Register mouse_packet_reg[0] in module mouse_basys3_FPGA has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v:92]
+WARNING: [Synth 8-7129] Port clock_100Mhz in module mouse_basys3_FPGA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port relative_ypos[8] in module new_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port relative_ypos[7] in module new_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port relative_ypos[6] in module new_block is either unconnected or has no load
@@ -226,18 +238,18 @@ WARNING: [Synth 8-7129] Port ESC in module GameEngine is either unconnected or h
 WARNING: [Synth 8-7129] Port D_ARROW in module GameEngine is either unconnected or has no load
 WARNING: [Synth 8-7129] Port fire in module Player is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1468.492 ; gain = 571.801
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1471.012 ; gain = 572.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1468.492 ; gain = 571.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1471.012 ; gain = 572.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1468.492 ; gain = 571.801
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1471.012 ; gain = 572.988
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1468.492 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1471.012 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -258,21 +270,23 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1580.836 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1569.383 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1580.836 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1569.383 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'first_stage_ram' at clock pin 'clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1581.137 ; gain = 684.445
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1570.141 ; gain = 672.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1581.137 ; gain = 684.445
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1570.141 ; gain = 672.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -284,7 +298,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for mario_picture. (constraint file  
 Applied set_property KEEP_HIERARCHY = SOFT for first_stage_ram. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for first_stage_rom. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:19 . Memory (MB): peak = 1581.137 ; gain = 684.445
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1570.141 ; gain = 672.117
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FirstStage'
 INFO: [Synth 8-802] inferred FSM for state register 'player_ver_state_reg' in module 'GameEngine'
@@ -306,7 +320,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'player_ver_state_reg' usin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'special_reg' using encoding 'sequential' in module 'GameEngine'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1581.137 ; gain = 684.445
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:41 . Memory (MB): peak = 1570.141 ; gain = 672.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -314,10 +328,9 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   4 Input   33 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 27    
+	   2 Input   32 Bit       Adders := 26    
 	   3 Input   32 Bit       Adders := 6     
 	   2 Input   17 Bit       Adders := 1     
-	   2 Input   15 Bit       Adders := 3     
 	   3 Input   12 Bit       Adders := 1     
 	   2 Input   12 Bit       Adders := 4     
 	   2 Input   11 Bit       Adders := 10    
@@ -330,22 +343,21 @@ Detailed RTL Component Info :
 	   2 Input    6 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 23    
 	   2 Input    3 Bit       Adders := 6     
-	   2 Input    2 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
 	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
 	               48 Bit    Registers := 1     
 	               24 Bit    Registers := 8     
-	               20 Bit    Registers := 3     
 	               17 Bit    Registers := 1     
 	               12 Bit    Registers := 3     
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 19    
 	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 9     
+	                8 Bit    Registers := 10    
 	                6 Bit    Registers := 5     
 	                4 Bit    Registers := 7     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 53    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 44    
 +---Multipliers : 
 	              32x32  Multipliers := 12    
 +---ROMs : 
@@ -359,7 +371,6 @@ Detailed RTL Component Info :
 	   2 Input   24 Bit        Muxes := 2     
 	   3 Input   24 Bit        Muxes := 1     
 	   2 Input   17 Bit        Muxes := 1     
-	   2 Input   15 Bit        Muxes := 6     
 	   4 Input   12 Bit        Muxes := 6     
 	   2 Input   11 Bit        Muxes := 1     
 	  10 Input   11 Bit        Muxes := 2     
@@ -369,7 +380,7 @@ Detailed RTL Component Info :
 	   4 Input   10 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 3     
 	   3 Input    9 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 12    
+	   2 Input    8 Bit        Muxes := 11    
 	  70 Input    8 Bit        Muxes := 1     
 	   3 Input    8 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 5     
@@ -389,13 +400,13 @@ Detailed RTL Component Info :
 	  11 Input    3 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 4     
 	  16 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 7     
 	   4 Input    2 Bit        Muxes := 5     
 	   3 Input    2 Bit        Muxes := 4     
 	  10 Input    2 Bit        Muxes := 1     
 	  11 Input    2 Bit        Muxes := 1     
 	  40 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 58    
+	   2 Input    1 Bit        Muxes := 62    
 	   5 Input    1 Bit        Muxes := 2     
 	   3 Input    1 Bit        Muxes := 12    
 	   4 Input    1 Bit        Muxes := 19    
@@ -583,6 +594,7 @@ DSP Report: Generating DSP ram_addr0, operation Mode is: C+((D:0xc)+A)*(B:0xb4).
 DSP Report: operator ram_addr0 is absorbed into DSP ram_addr0.
 DSP Report: operator ram_addr1 is absorbed into DSP ram_addr0.
 DSP Report: operator ram_addr2 is absorbed into DSP ram_addr0.
+WARNING: [Synth 8-7129] Port clock_100Mhz in module mouse_basys3_FPGA is either unconnected or has no load
 WARNING: [Synth 8-7129] Port relative_ypos[8] in module new_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port relative_ypos[7] in module new_block is either unconnected or has no load
 WARNING: [Synth 8-7129] Port relative_ypos[6] in module new_block is either unconnected or has no load
@@ -600,7 +612,7 @@ WARNING: [Synth 8-7129] Port ESC in module GameEngine is either unconnected or h
 WARNING: [Synth 8-7129] Port D_ARROW in module GameEngine is either unconnected or has no load
 WARNING: [Synth 8-7129] Port fire in module Player is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:47 . Memory (MB): peak = 1581.137 ; gain = 684.445
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:01:31 . Memory (MB): peak = 1570.141 ; gain = 672.117
 ---------------------------------------------------------------------------------
  Sort Area is  Clouds_u/rgb_nxt3_0 : 0 0 : 3101 5879 : Used 1 time 0
  Sort Area is  Clouds_u/rgb_nxt3_0 : 0 1 : 2778 5879 : Used 1 time 0
@@ -740,19 +752,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:56 . Memory (MB): peak = 1581.137 ; gain = 684.445
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:01:48 . Memory (MB): peak = 1570.141 ; gain = 672.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:58 . Memory (MB): peak = 1581.137 ; gain = 684.445
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:01:52 . Memory (MB): peak = 1570.141 ; gain = 672.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:01:03 . Memory (MB): peak = 1587.809 ; gain = 691.117
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:02:00 . Memory (MB): peak = 1589.770 ; gain = 691.746
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -770,37 +782,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:01:07 . Memory (MB): peak = 1602.594 ; gain = 705.902
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:02:10 . Memory (MB): peak = 1604.617 ; gain = 706.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:01:07 . Memory (MB): peak = 1602.594 ; gain = 705.902
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:02:10 . Memory (MB): peak = 1604.617 ; gain = 706.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:01:09 . Memory (MB): peak = 1602.594 ; gain = 705.902
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:02:12 . Memory (MB): peak = 1604.617 ; gain = 706.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:01:09 . Memory (MB): peak = 1602.594 ; gain = 705.902
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:02:12 . Memory (MB): peak = 1604.617 ; gain = 706.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:01:09 . Memory (MB): peak = 1602.637 ; gain = 705.945
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:02:12 . Memory (MB): peak = 1604.617 ; gain = 706.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:01:09 . Memory (MB): peak = 1602.637 ; gain = 705.945
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:02:12 . Memory (MB): peak = 1604.617 ; gain = 706.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -888,46 +900,46 @@ Report Cell Usage:
 |1     |clk_wiz      |     1|
 |2     |dist_mem_gen |     3|
 |5     |BUFG         |     2|
-|6     |CARRY4       |   744|
+|6     |CARRY4       |   732|
 |7     |DSP48E1      |    43|
 |10    |LUT1         |   225|
 |11    |LUT2         |  1258|
-|12    |LUT3         |  1092|
-|13    |LUT4         |   965|
-|14    |LUT5         |   619|
-|15    |LUT6         |   842|
+|12    |LUT3         |  1087|
+|13    |LUT4         |   917|
+|14    |LUT5         |   616|
+|15    |LUT6         |   843|
 |16    |MUXF7        |    23|
 |17    |MUXF8        |     1|
 |18    |RAMB18E1     |     1|
 |19    |SRL16E       |     2|
-|20    |FDCE         |   549|
+|20    |FDCE         |   500|
 |21    |FDPE         |    15|
-|22    |FDRE         |    51|
-|23    |IBUF         |     4|
-|24    |OBUF         |    15|
+|22    |FDRE         |    52|
+|23    |IBUF         |     6|
+|24    |OBUF         |    16|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:01:09 . Memory (MB): peak = 1602.637 ; gain = 705.945
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:02:12 . Memory (MB): peak = 1604.617 ; gain = 706.594
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:01:06 . Memory (MB): peak = 1602.637 ; gain = 593.301
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:01:09 . Memory (MB): peak = 1602.637 ; gain = 705.945
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:02:08 . Memory (MB): peak = 1604.617 ; gain = 607.465
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:02:13 . Memory (MB): peak = 1604.617 ; gain = 706.594
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1614.691 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 812 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 1616.641 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 800 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1618.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1620.340 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: ab1927d
+Synth Design complete | Checksum: 20e3c6c4
 INFO: [Common 17-83] Releasing license: Synthesis
-86 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 160 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:01:17 . Memory (MB): peak = 1618.348 ; gain = 1115.102
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1618.348 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:02:31 . Memory (MB): peak = 1620.340 ; gain = 1114.750
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1620.340 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May 28 13:12:31 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed May 28 16:12:51 2025...

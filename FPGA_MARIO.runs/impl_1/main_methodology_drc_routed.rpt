@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed May 28 13:15:29 2025
+| Date         : Wed May 28 16:18:08 2025
 | Host         : YanX running 64-bit major release  (build 9200)
 | Command      : report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx
 | Design       : main
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 159
+             Violations found: 165
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 83         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 89         |
 | DPIR-1    | Warning          | Asynchronous driver check     | 36         |
 | SYNTH-10  | Warning          | Wide multiplier               | 39         |
 | TIMING-18 | Warning          | Missing input or output delay | 1          |
@@ -432,22 +432,52 @@ Related violations: <none>
 
 TIMING-17#80 Critical Warning
 Non-clocked sequential cell  
-The clock pin Mouse/byte_received_reg/C is not reached by a timing clock
+The clock pin Mouse/byte_count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#81 Critical Warning
 Non-clocked sequential cell  
-The clock pin Mouse/mouse_byte_reg[0]/C is not reached by a timing clock
+The clock pin Mouse/byte_count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#82 Critical Warning
 Non-clocked sequential cell  
-The clock pin Mouse/mouse_byte_reg[1]/C is not reached by a timing clock
+The clock pin Mouse/middle_click_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#83 Critical Warning
 Non-clocked sequential cell  
-The clock pin Mouse/mouse_byte_reg[2]/C is not reached by a timing clock
+The clock pin Mouse/mouse_packet_reg[0][2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin Mouse/shift_reg_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin Mouse/shift_reg_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin Mouse/shift_reg_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin Mouse/shift_reg_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Critical Warning
+Non-clocked sequential cell  
+The clock pin Mouse/shift_reg_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Critical Warning
+Non-clocked sequential cell  
+The clock pin Mouse/shift_reg_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 DPIR-1#1 Warning

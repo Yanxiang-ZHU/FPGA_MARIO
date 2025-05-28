@@ -122,7 +122,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
@@ -138,10 +140,10 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.runs/synth_1/main.dcp
-  read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
-  read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1.xci
-  read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2.xci
+  read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
+  read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1.xci
+  read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/39551/Desktop/DOS-Mario-FPGA/constraints/Basys3_Master.xdc
 OPTRACE "read constraints: implementation" END { }

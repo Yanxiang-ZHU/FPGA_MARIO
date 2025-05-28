@@ -70,7 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
+set_param tcl.collectionResultDisplayLimit 0
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -87,8 +88,8 @@ set_property ip_output_repo c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.cache/i
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files c:/Users/39551/Desktop/FPGA_MARIO/figures/mario.coe
-add_files c:/Users/39551/Desktop/FPGA_MARIO/figures/first_stage.coe
+add_files C:/Users/39551/Desktop/FPGA_MARIO/figures/mario.coe
+add_files C:/Users/39551/Desktop/FPGA_MARIO/figures/first_stage.coe
 read_verilog -library xil_defaultlib -sv {
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/board.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/clouds.v
@@ -110,18 +111,18 @@ read_verilog -library xil_defaultlib {
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/vga_timing.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/main.v
 }
-read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
+read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.gen/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0_ooc.xdc]
 
-read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1.xci
+read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.gen/sources_1/ip/dist_mem_gen_1/dist_mem_gen_1_ooc.xdc]
 
-read_ip -quiet c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2.xci
+read_ip -quiet C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2.xci
 set_property used_in_implementation false [get_files -all c:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.gen/sources_1/ip/dist_mem_gen_2/dist_mem_gen_2_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -137,6 +138,8 @@ read_xdc C:/Users/39551/Desktop/DOS-Mario-FPGA/constraints/Basys3_Master.xdc
 set_property used_in_implementation false [get_files C:/Users/39551/Desktop/DOS-Mario-FPGA/constraints/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/39551/Desktop/FPGA_MARIO/FPGA_MARIO.srcs/utils_1/imports/synth_1/main.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
