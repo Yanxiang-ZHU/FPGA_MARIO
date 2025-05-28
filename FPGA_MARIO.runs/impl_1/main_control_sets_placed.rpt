@@ -1,0 +1,129 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed May 28 13:13:53 2025
+| Host         : YanX running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    51 |
+|    Minimum number of control sets                        |    51 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   106 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    51 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |    10 |
+| >= 8 to < 10       |     5 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     7 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    19 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              43 |           15 |
+| No           | No                    | Yes                    |             405 |          166 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               8 |            4 |
+| Yes          | No                    | Yes                    |             158 |           64 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+----------------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|        Clock Signal        |                                            Enable Signal                                           | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------+----------------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+| ~PS2Data_IBUF_BUFG         | Mouse/mouse_byte[2]_i_1_n_0                                                                        | btnC_IBUF        |                1 |              1 |         1.00 |
+| ~PS2Data_IBUF_BUFG         | Mouse/mouse_byte[1]_i_1_n_0                                                                        | btnC_IBUF        |                1 |              1 |         1.00 |
+| ~PS2Data_IBUF_BUFG         | Mouse/mouse_byte[0]_i_1_n_0                                                                        | btnC_IBUF        |                1 |              1 |         1.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/block_ypos[3]_i_1_n_0                                                                 | btnC_IBUF        |                3 |              4 |         1.33 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/player_life[3]_i_1_n_0                                                                | btnC_IBUF        |                1 |              4 |         4.00 |
+| ~PS2Data_IBUF_BUFG         |                                                                                                    | btnC_IBUF        |                2 |              5 |         2.50 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[41]_i_1_n_0                                                                | btnC_IBUF        |                2 |              6 |         3.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[35]_i_1_n_0                                                                | btnC_IBUF        |                3 |              6 |         2.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[29]_i_1_n_0                                                                | btnC_IBUF        |                3 |              6 |         2.00 |
+|  clk_600_BUFG              | GameEngine_u/plane_xpos_ofs[5]_i_1_n_0                                                             | btnC_IBUF        |                4 |              6 |         1.50 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[5]_i_1_n_0                                                                 | btnC_IBUF        |                2 |              6 |         3.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[23]_i_1_n_0                                                                | btnC_IBUF        |                3 |              6 |         2.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[17]_i_1_n_0                                                                | btnC_IBUF        |                3 |              6 |         2.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[47]_i_1_n_0                                                                | btnC_IBUF        |                2 |              6 |         3.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/modi_block[11]_i_1_n_0                                                                | btnC_IBUF        |                2 |              6 |         3.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/old_block[5]_i_1_n_0                                                                  | btnC_IBUF        |                4 |              6 |         1.50 |
+|  clk_wiz_0_u/inst/clk_out1 | Music_u/counter_octave[7]_i_1_n_0                                                                  |                  |                4 |              8 |         2.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/block_xpos[7]_i_1_n_0                                                                 | btnC_IBUF        |                3 |              8 |         2.67 |
+|  clk_600_BUFG              | GameEngine_u/plane_xpos[7]_i_1_n_0                                                                 | btnC_IBUF        |                4 |              8 |         2.00 |
+|  clk_600_BUFG              | GameEngine_u/jump_height[7]_i_1_n_0                                                                | btnC_IBUF        |                2 |              8 |         4.00 |
+|  clk_600_BUFG              | GameEngine_u/player_ypos[8]_i_1_n_0                                                                | btnC_IBUF        |                4 |              9 |         2.25 |
+|  clk_600_BUFG              | GameEngine_u/bcgr_xpos[9]_i_1_n_0                                                                  | btnC_IBUF        |                4 |             10 |         2.50 |
+|  clk_600_BUFG              | GameEngine_u/sel                                                                                   | btnC_IBUF        |                3 |             10 |         3.33 |
+|  clk_wiz_0_u/inst/clk_out1 | VgaTiming_u/vcount_nxt[8]                                                                          | btnC_IBUF        |                3 |             10 |         3.33 |
+|  clk_600_BUFG              |                                                                                                    | btnC_IBUF        |                8 |             12 |         1.50 |
+|  board_divider/clk_50M     |                                                                                                    | btnC_IBUF        |                4 |             12 |         3.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/new_block_u/player_points0                                                            | btnC_IBUF        |                3 |             12 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out1 | GameEngine_u/new_block_u/E[0]                                                                      | btnC_IBUF        |                3 |             12 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_15_0_0_i_1_n_0      |                  |                2 |             12 |         6.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_31_0_0_i_1_n_0      |                  |                2 |             12 |         6.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_63_0_0_i_1_n_0      |                  |                3 |             12 |         4.00 |
+| ~clk_wiz_0_u/inst/clk_out1 |                                                                                                    | btnC_IBUF        |                6 |             14 |         2.33 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_127_0_0_i_1_n_0     |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1152_1279_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1280_1407_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1024_1151_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1792_1919_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1536_1663_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_128_255_0_0_i_1_n_0   |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1408_1535_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1664_1791_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_1920_2047_0_0_i_1_n_0 |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_512_639_0_0_i_1_n_0   |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_640_767_0_0_i_1_n_0   |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_384_511_0_0_i_1_n_0   |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_256_383_0_0_i_1_n_0   |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_768_895_0_0_i_1_n_0   |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out2 | first_stage_ram/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_896_1023_0_0_i_1_n_0  |                  |                6 |             24 |         4.00 |
+|  clk_wiz_0_u/inst/clk_out1 |                                                                                                    |                  |               15 |             45 |         3.00 |
+|  clk_wiz_0_u/inst/clk_out2 |                                                                                                    | btnC_IBUF        |               26 |             88 |         3.38 |
+|  clk_wiz_0_u/inst/clk_out1 |                                                                                                    | btnC_IBUF        |              120 |            274 |         2.28 |
++----------------------------+----------------------------------------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+
+

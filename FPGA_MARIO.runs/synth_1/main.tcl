@@ -92,6 +92,7 @@ add_files c:/Users/39551/Desktop/FPGA_MARIO/figures/first_stage.coe
 read_verilog -library xil_defaultlib -sv {
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/board.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/clouds.v
+  C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/gameover.v
 }
 read_verilog -library xil_defaultlib {
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/change2negedge.v
@@ -100,7 +101,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/draw_mario_score.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/first_stage.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/game_engine.v
-  C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/gameover.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/mario_font_rom.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/sources/mario_score24x1.v
   C:/Users/39551/Desktop/DOS-Mario-FPGA/DOS_Mario.srcs/sources_1/new/mouse.v
