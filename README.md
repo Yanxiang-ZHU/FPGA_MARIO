@@ -1,1 +1,1 @@
-This is the FPGA program based on basys3 (Xilinx) , built by Zhu Yanxiang, Shao Ziyue, Zhu Luyu, Zhu dinchen, Han yixuan.
+This is the Mario FPGA program based on Vivado, built by Zhu Yanxiang and Zhu dinchen.
